@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <img src="{% static 'images/htlogo.webp' %}" alt="">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum magni ullam vitae in rerum? Voluptatem quisquam repellat recusandae, beatae amet enim atque molestiae corrupti cumque inventore dolor nulla saepe culpa.</p>
+    </center>
+    
+    <ul>
+       <li><a href="{% url 'business' %}">Business News</a></li>
+       <li><a href="{% url 'sports' %}">Sports News</a></li>
+       <li><a href="{% url 'entertainment' %}">Entertainment News</a></li>
+    </ul>
+    
+
+
+</body>
+</html>
