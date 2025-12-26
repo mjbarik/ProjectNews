@@ -1,12 +1,40 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
 </head>
 <body>
-    <h1>This is news page</h1>
+    <h1>This is {{type}} bulletin</h1>
+
+    <div class="container">
+        {% if type == 'business' %}
+        <img src="{% static 'images/b1.jpg' %}" alt="">
+        <img src="{% static 'images/b2.jpg' %}" alt="">
+        <img src="{% static 'images/b3.jpg' %}" alt="">
+        {% elif type == 'sports' %}
+        <img src="{% static 'images/s1.jpg' %}" alt="">
+        <img src="{% static 'images/s2.jpg' %}" alt="">
+        <img src="{% static 'images/s3.jpg' %}" alt="">
+        
+        {% elif type == 'entertainment' %}
+        <img src="{% static 'images/e1.png' %}" alt="">
+        <img src="{% static 'images/e2.jpg' %}" alt="">
+        <img src="{% static 'images/e3.jpg' %}" alt="">
+
+        {% endif %}
+    </div>
+
+
+
+    <ul>
+        <h3><li>{{h1}}</li></h3>
+        <h3><li>{{h2}}</li></h3>
+        <h3><li>{{h3}}</li></h3>
+    </ul>
     <a href="{% url 'home' %}"><button>Home</button></a>
 
 </body>
